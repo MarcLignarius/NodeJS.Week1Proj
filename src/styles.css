@@ -1,3 +1,9 @@
 body {
-  background-color: pink;
+  background-image: url("https://i.ytimg.com/vi/Crgd7wy6z1A/maxresdefault.jpg");
+  background-blend-mode: multiply;
+  background-color: #3D3A39;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
 }
