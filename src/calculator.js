@@ -1,29 +1,47 @@
-// export function calculator() {
-//   let today = new Date();
-//   return today;
-// }
+export class Calculator
+{
+  constructor(date)
+  {
+    this.date = new Date(date);
+  }
 
-export function calculator() {
-  const mercury = 0.24;
-  const venus = 0.62;
-  const earth = 1;
-  const mars = 1.88;
-  const jupiter = 11.86;
+  ageOnEarth()
+  {
+    let ageInMilliseconds = new Date() - this.date.getTime();
+    let ageInYears = new Date(ageInMilliseconds);
+    return Math.abs(ageInYears.getUTCFullYear() - 1970);
+  }
 
-  let ageString = moment("19831107", "YYYYMMDD").fromNow().toString();
-  console.log("ageString", ageString)
-  let age = parseInt(ageString.slice(0, ageString.length -10));
-  console.log("age", age)
+  ageOnMercury()
+  {
+    const mercuryYears = 0.24;
+    let earthAge = this.ageOnEarth();
+    let mercuryAge = Math.floor(earthAge / mercuryYears);
+    return mercuryAge;
+  }
 
+  ageOnVenus()
+  {
+    const venusYears = 0.62;
+    let earthAge = this.ageOnEarth();
+    let venusAge = Math.floor(earthAge / venusYears);
+    return venusAge;
+  }
 
-  let ageOnMercury = Math.floor(age / mercury);
-  console.log("ageOnMercury", ageOnMercury);
-  let ageOnVenus = Math.floor(age / venus);
-  console.log("ageOnVenus", ageOnVenus);
-  let ageOnEarth = Math.floor(age / earth);
-  console.log("ageOnEarth", ageOnEarth);
-  let ageOnMars = Math.floor(age / mars);
-  console.log("ageOnMars", ageOnMars);
-  let ageOnJupiter = Math.floor(age / jupiter);
-  console.log("ageOnJupiter", ageOnJupiter);
+  ageOnMars()
+  {
+    const marsYears = 1.88;
+    let earthAge = this.ageOnEarth();
+    let marsAge = Math.floor(earthAge / marsYears);
+    return marsAge;
+  }
+
+  ageOnJupiter()
+  {
+    const jupiterYears = 11.86;
+    let earthAge = this.ageOnEarth();
+    let jupiterAge = Math.floor(earthAge / jupiterYears);
+    return jupiterAge;
+  }
+
 }
