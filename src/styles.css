@@ -1,9 +1,35 @@
 body {
-  background-image: url("https://i.ytimg.com/vi/Crgd7wy6z1A/maxresdefault.jpg");
+  background-image: url("https://wallpaperplay.com/walls/full/9/3/a/298894.jpg");
   background-blend-mode: multiply;
-  background-color: #3D3A39;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
-}
+    background-color: #3D3A39;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+  }
+
+  .jumbotron h1, em {
+    opacity: 0.80;
+  }
+
+  .jumbotron {
+    background: rgba(61, 58, 57, 0.75);
+  }
+
+  .btn {
+    margin-bottom: 5px;
+    background: rgba(61, 58, 57, 0.75);
+  }
+
+  label, input {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  #output {
+    display: none;
+  }
