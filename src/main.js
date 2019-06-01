@@ -1,14 +1,24 @@
-import { calculator } from './calculator';
+import { Calculator } from './calculator.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function() {
-  $('#calculator-form').submit(function(event) {
+  $("form#input").submit(function(event) {
     event.preventDefault();
-    var birthdate = $('#birthdate').val();
-    var output = calculator(birthdate);
-    $('#result').text(output);
+    let birthdate = $("input#birthdate").val().toString();
+    let calculator = new Calculator(new Date(birthdate));
+    let ageOnMercury = calculator.ageOnMercury();
+    let ageOnVenus = calculator.ageOnVenus();
+    let ageOnEarth = calculator.ageOnEarth();
+    let ageOnMars = calculator.ageOnMars();
+    let ageOnJupiter = calculator.ageOnJupiter();
+    $(".ageOnMercury").text(ageOnMercury);
+    $(".ageOnVenus").text(ageOnVenus);
+    $(".ageOnEarth").text(ageOnEarth);
+    $(".ageOnMars").text(ageOnMars);
+    $(".ageOnJupiter").text(ageOnJupiter);
+    $("#output").show();
   });
 });
