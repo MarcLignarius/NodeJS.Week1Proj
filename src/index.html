@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Space Age Calculator</title>
-  </head>
-  <body>
-    <form id="calculator-form">
-      <label for="birthdate">Enter your birthdate:</label>
-      <input id="birthdate" type="number">
-      <button type="submit" class="btn btn-dark">Submit</button>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Super Galactic Age Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Super Galactic Age Calculator</h1>
+    </div>
+    <form id="input">
+      <label for="date">Enter your date of birth:</label><br>
+      <input type="date" id="birthdate"><br>
+      <button type="submit" class="btn btn-dark">Go!</button>
     </form>
-    <div id="result"></div>
-  </body>
+    <br>
+    <div id="output">
+      <p>You are <span class="ageOnEarth"></span> years old.
+      <p>You would be:<p>
+      <ul>
+        <li><span class="ageOnMercury"></span> years old on Mercury</li>
+        <li><span class="ageOnVenus"></span> years old on Venus</li>
+        <li><span class="ageOnMars"></span> years old on Mars</li>
+        <li><span class="ageOnJupiter"></span> years old on Jupiter</li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
